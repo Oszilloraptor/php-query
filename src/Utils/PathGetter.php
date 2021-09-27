@@ -105,9 +105,7 @@ final class PathGetter implements PathGetterInterface
      */
     private function inaccessiblePathSegment($value)
     {
-        [$type, $key] = $this->segments[$this->lvl];
-
-        throw new InaccessiblePathSegmentException($type, $key, $value, $this->path, $this->lvl);
+        throw new InaccessiblePathSegmentException($this->segments[$this->lvl], $value, $this->path, $this->lvl);
     }
 
     /** parses a segment into an array with [$type, $name, $args]. */
