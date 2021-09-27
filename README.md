@@ -1,5 +1,16 @@
 # PhpQuery
 
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/rikta/php-query)
+[![GitHub license](https://img.shields.io/github/license/RiktaD/php-query)](https://github.com/RiktaD/php-query/blob/main/LICENSE.md)
+![GitHub issues by-label](https://img.shields.io/github/issues/riktad/php-query/bug?label=%F0%9F%90%9B)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/RiktaD/php-query)
+![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/RiktaD/php-query)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/riktad/php-query/main)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/riktad/php-query)
+![Packagist Downloads](https://img.shields.io/packagist/dm/rikta/php-query)
+![Packagist Version](https://img.shields.io/packagist/v/rikta/php-query)
+![Packagist Version (including pre-releases)](https://img.shields.io/packagist/v/rikta/php-query?include_prereleases)
+
 Fluently Query a repository or array for items that match certain criteria and arrange
 the results in a particular order.
 
