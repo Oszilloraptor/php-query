@@ -8,8 +8,9 @@ use OutOfBoundsException;
 
 class InaccessiblePathSegmentException extends OutOfBoundsException implements QueryRuntimeException
 {
-    public function __construct($type, $key, $value, $path, $lvl)
+    public function __construct($segment, $value, $path, $lvl)
     {
+        [$type, $key] = $segment;
         switch ($type) {
             case 'method': $key = "->{$key}()"; break;
             case 'property': $key = "->{$key}"; break;
