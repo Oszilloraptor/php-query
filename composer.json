@@ -1,0 +1,45 @@
+{
+    "name": "rikta/php-query",
+    "description": "Fluently query a repository for data",
+    "version": "1.0.0",
+    "scripts": {
+        "release": "conventional-changelog --commit",
+        "style": "./vendor/bin/php-cs-fixer fix --diff -v",
+        "test": "./vendor/bin/phpunit tests",
+        "coverage": "export XDEBUG_MODE=coverage && ./vendor/bin/phpunit tests --coverage-html ./coverage"
+    },
+    "require": {
+        "ext-json": "*",
+        "jasny/http-message": "^1.3",
+        "rikta/repository": "dev-main",
+        "rikta/timed-loop": "^1.0",
+        "symfony/process": "^5.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.1",
+        "marcocesarato/php-conventional-changelog": "^1.12",
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis Richter",
+            "email": "richter@vivaldi.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rikta\\PhpQuery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rikta\\PhpQuery\\Tests\\": "tests/",
+            "Rikta\\PhpQuery\\Examples\\": "examples/"
+        }
+    },
+    "type": "library",
+    "config": {
+        "sort-packages": true
+    }
+}
