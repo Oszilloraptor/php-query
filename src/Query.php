@@ -34,6 +34,31 @@ class Query implements QueryInterface
         return $this;
     }
 
+    /** {@inheritDoc} */
+    public function getResultsFor($repository): QueryResultInterface
+    {
+        if (\is_array($repository)) {
+            $repository = new ArrayRepository($repository);
+        }
+
+        $items = $repository->getAllItems();
+        $items = $this->applyOperations($items);
+
+        return new QueryResult($items, $this);
+    }
+
+    /** {@inheritDoc} */
+    public function wait(RepositoryInterface $repository, int $minItems = 1, int $maxSeconds = 10, int $retryAfterMicroseconds = 5_000): QueryInterface
+    {
+        (new TimedLoop(fn () => $this->getResultsFor($repository)->getSize() >= $minItems))
+            ->forMaximumSeconds($maxSeconds)
+            ->retryingAfterMicroseconds($retryAfterMicroseconds)
+            ->invoke()
+        ;
+
+        return $this;
+    }
+
     /** Applies all added operations on an array of items. */
     private function applyOperations(array $items): array
     {

@@ -20,4 +20,20 @@ interface QueryInterface extends _FilterOperationMethodsInterface,       // is*,
 {
     /** Adds an operation that shall be performed when results are gathered. */
     public function addOperation(QueryOperationInterface $operation): self;
+
+    /**
+     * Returns items after applying previously added operations.
+     *
+     * @param array|RepositoryInterface $repository
+     *
+     * @return QueryResultInterface<mixed, mixed>
+     */
+    public function getResultsFor($repository): QueryResultInterface;
+
+    /**
+     * Waits until $minItems are matching the query for $repository.
+     *
+     * @throws LoopTimeoutException if $maxSeconds have passed without returning a result
+     */
+    public function wait(RepositoryInterface $repository, int $minItems = 1, int $maxSeconds = 10, int $retryAfterMicroseconds = 5_000): self;
 }
