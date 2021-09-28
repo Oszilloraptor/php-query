@@ -4,6 +4,9 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [0.1.2](https://github.com/RiktaD/php-query/compare/v0.1.1...v0.1.2) (2021-09-28)
+---
+
 ## [0.1.1](https://github.com/RiktaD/php-query/compare/v0.1.0...v0.1.1) (2021-09-28)
 ---
 
