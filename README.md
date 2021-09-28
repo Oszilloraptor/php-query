@@ -1,21 +1,25 @@
 # PhpQuery
 
-![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/rikta/php-query)
-[![GitHub license](https://img.shields.io/github/license/RiktaD/php-query)](https://github.com/RiktaD/php-query/blob/main/LICENSE.md)
-![GitHub issues by-label](https://img.shields.io/github/issues/riktad/php-query/bug?label=%F0%9F%90%9B)
-![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/RiktaD/php-query)
-![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/RiktaD/php-query)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/riktad/php-query/main)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/riktad/php-query)
-![Packagist Downloads](https://img.shields.io/packagist/dm/rikta/php-query)
-![Packagist Version](https://img.shields.io/packagist/v/rikta/php-query)
-![Packagist Version (including pre-releases)](https://img.shields.io/packagist/v/rikta/php-query?include_prereleases)
+[![packagist name](https://badgen.net/packagist/name/rikta/php-query)](https://packagist.org/packages/rikta/php-query)
+[![version](https://badgen.net/packagist/v/rikta/php-query/latest?label&color=green)](https://github.com/RiktaD/php-query/releases)
+[![php version](https://badgen.net/packagist/php/rikta/php-query)](https://github.com/RiktaD/php-query/blob/main/composer.json)
+
+[![license](https://badgen.net/github/license/riktad/php-query)](https://github.com/RiktaD/php-query/blob/main/LICENSE.md)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/riktad/php-query)](https://github.com/RiktaD/php-query/graphs/commit-activity)
+[![open issues](https://badgen.net/github/open-issues/riktad/php-query)](https://github.com/RiktaD/php-query/issues?q=is%3Aopen+is%3Aissue)
+[![closed issues](https://badgen.net/github/closed-issues/riktad/php-query)](https://github.com/RiktaD/php-query/issues?q=is%3Aissue+is%3Aclosed)
+
+[![ci](https://badgen.net/github/checks/riktad/php-query?label=ci)](https://github.com/RiktaD/php-query/actions?query=branch%3Amain+workflow%3A%22Testing+Query%22+workflow%3Acreate-release++)
+[![dependabot](https://badgen.net/github/dependabot/riktad/php-query)](https://dependabot.com)
+[![maintainability score](https://badgen.net/codeclimate/maintainability/RiktaD/php-query)](https://codeclimate.com/github/RiktaD/php-query)
+[![tech debt %](https://badgen.net/codeclimate/tech-debt/RiktaD/php-query)](https://codeclimate.com/github/RiktaD/php-query/issues)
+[![maintainability issues](https://badgen.net/codeclimate/issues/RiktaD/php-query?label=maintainability%20issues)](https://codeclimate.com/github/RiktaD/php-query/issues)
 
 Fluently Query a repository or array for items that match certain criteria and arrange
 the results in a particular order.
 
-Like a low-budget php version of SQL where budget wasn't even enough for a database
-and we have to be happy with an in-session-memory.
+Like a low-budget php version of an ORM-library where budget wasn't even enough for a database
+and we have to be happy with in-session-memory.
 
 Contrary to the proper db-based libraries this one works on anything that can be represented
 inside a key-value store or array.
@@ -26,7 +30,7 @@ fire a query on it.
 
 You could also store the query on a variable and then call it for different repositories, or use it as a configurable getter.
 
-_(For your convenience you can also pass an array; it will be converted into an ArrayRepository automatically)_
+_(For your convenience you can also just pass an array; it will be converted into an `ArrayRepository` automatically)_
 
 ## Installation 
 
