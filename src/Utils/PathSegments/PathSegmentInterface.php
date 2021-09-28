@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Rikta\PhpQuery\Utils\PathSegments;
 
+/**
+ * @internal
+ */
 interface PathSegmentInterface
 {
     /** Returns the value from the key (which must've been set previously, e.g. via the constructor) */

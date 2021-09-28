@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Rikta\PhpQuery\Utils\PathSegments;
 
-class ArraySegment implements PathSegmentInterface
+/**
+ * @internal
+ */
+final class ArraySegment implements PathSegmentInterface
 {
     private $key;
     private string $notation;
