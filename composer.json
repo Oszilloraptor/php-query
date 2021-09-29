@@ -12,7 +12,8 @@
         "php": "^7.4|^8.0",
         "ext-json": "*",
         "rikta/repository": "dev-main",
-        "rikta/timed-loop": "^1.0"
+        "rikta/timed-loop": "^1.0",
+        "rikta/value-path": "^0.1.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.1",

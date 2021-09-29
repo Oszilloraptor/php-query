@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Rikta\PhpQuery\Operation\Replacement;
 
 use Rikta\PhpQuery\QueryInterface;
-use Rikta\PhpQuery\Utils\PathGetter;
+use Rikta\ValuePath\ValuePath;
 
 /**
  * @internal this trait shall only be used to build the Query-class and not be used on it's own in any class!
@@ -52,6 +52,6 @@ trait _ReplacementOperationMethodsTrait
      */
     public function multiMap(array $mapping): QueryInterface
     {
-        return $this->addOperation(new MultiMap(array_map(fn ($path) => $this->getter[$path] ??= new PathGetter($path), $mapping)));
+        return $this->addOperation(new MultiMap(array_map(fn ($path) => $this->getter[$path] ??= new ValuePath($path), $mapping)));
     }
 }

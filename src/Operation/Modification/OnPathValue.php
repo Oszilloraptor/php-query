@@ -7,16 +7,16 @@ namespace Rikta\PhpQuery\Operation\Modification;
 use Rikta\PhpQuery\Exception\IncompatibleModificationException;
 use Rikta\PhpQuery\Operation\QueryOperationInterface;
 use Rikta\PhpQuery\Operation\QueryOperationTrait;
-use Rikta\PhpQuery\Utils\PathGetterInterface;
+use Rikta\ValuePath\ValuePathInterface;
 
 final class OnPathValue implements QueryOperationInterface
 {
     use QueryOperationTrait;
 
-    private PathGetterInterface $getter;
+    private ValuePathInterface $getter;
     private QueryOperationInterface $operation;
 
-    public function __construct(QueryOperationInterface $operation, PathGetterInterface $getter)
+    public function __construct(QueryOperationInterface $operation, ValuePathInterface $getter)
     {
         if (!$operation->isApplicableOnSubValue()) {
             throw new IncompatibleModificationException($this, $operation);

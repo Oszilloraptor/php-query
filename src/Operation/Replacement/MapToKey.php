@@ -6,15 +6,15 @@ namespace Rikta\PhpQuery\Operation\Replacement;
 
 use Rikta\PhpQuery\Operation\QueryOperationInterface;
 use Rikta\PhpQuery\Operation\QueryOperationTrait;
-use Rikta\PhpQuery\Utils\PathGetter;
+use Rikta\ValuePath\ValuePath;
 
 class MapToKey implements QueryOperationInterface
 {
     use QueryOperationTrait;
 
-    private PathGetter $getter;
+    private ValuePath $getter;
 
-    public function __construct(PathGetter $getter)
+    public function __construct(ValuePath $getter)
     {
         $this->getter = $getter;
     }
