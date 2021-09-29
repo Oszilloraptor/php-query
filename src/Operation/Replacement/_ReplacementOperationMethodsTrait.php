@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Rikta\PhpQuery\Operation\Replacement;
 
 use Rikta\PhpQuery\QueryInterface;
-use Rikta\PhpQuery\Utils\ValuePath;
+use Rikta\ValuePath\ValuePath;
 
 /**
  * @internal this trait shall only be used to build the Query-class and not be used on it's own in any class!

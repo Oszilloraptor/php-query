@@ -6,7 +6,7 @@ namespace Rikta\PhpQuery\Operation\Replacement;
 
 use Rikta\PhpQuery\Operation\QueryOperationInterface;
 use Rikta\PhpQuery\Operation\QueryOperationTrait;
-use Rikta\PhpQuery\Utils\ValuePath;
+use Rikta\ValuePath\ValuePath;
 
 class MultiMap implements QueryOperationInterface
 {
