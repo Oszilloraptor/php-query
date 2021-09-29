@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 ### Features
 
 #### General Logic
-* Implement PathGetter ([67c257](https://github.com/RiktaD/php-query/commit/67c2578f00301ab6dd22e2f257bd784ed8b34e4f))
+* Implement ValuePath ([67c257](https://github.com/RiktaD/php-query/commit/67c2578f00301ab6dd22e2f257bd784ed8b34e4f))
 * Implement Query & QueryInterface ([6141d1](https://github.com/RiktaD/php-query/commit/6141d107e4b20b705394033dca572b7e3fe15e92))
 * Implement QueryResult ([a4f6a7](https://github.com/RiktaD/php-query/commit/a4f6a77b11a0db97cc7ecb96f95f63b6e6a8ca3d))
 * Implement Operations ([1312a8](https://github.com/RiktaD/php-query/commit/1312a8e5338637dd6dde5820d4d2aa7ad6f83f44))

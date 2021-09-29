@@ -8,8 +8,8 @@ namespace Rikta\PhpQuery\Operation\Modification;
 
 use Rikta\PhpQuery\Operation\QueryOperationInterface;
 use Rikta\PhpQuery\QueryInterface;
-use Rikta\PhpQuery\Utils\PathGetter;
-use Rikta\PhpQuery\Utils\PathGetterInterface;
+use Rikta\ValuePath\ValuePath;
+use Rikta\ValuePath\ValuePathInterface;
 
 /**
  * The purpose of the methods in this specific trait is:
@@ -24,7 +24,7 @@ trait _ModificationOperationMethodsTrait
 {
     private bool $flipNext = false;
 
-    /** @var array<string, PathGetterInterface> caching-array of getters */
+    /** @var array<string, ValuePathInterface> caching-array of getters */
     private array $getters = [];
 
     /** @var bool shall the next operation be negated? */
@@ -89,12 +89,12 @@ trait _ModificationOperationMethodsTrait
         return $operation;
     }
 
-    protected function getGetter(string $path): PathGetterInterface
+    protected function getGetter(string $path): ValuePathInterface
     {
-        return $this->getters[$path] ??= new PathGetter($path);
+        return $this->getters[$path] ??= new ValuePath($path);
     }
 
-    protected function nextGetter(): PathGetterInterface
+    protected function nextGetter(): ValuePathInterface
     {
         $getter = $this->getGetter($this->nextPath);
         $this->nextPath = null;

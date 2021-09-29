@@ -6,19 +6,19 @@ namespace Rikta\PhpQuery\Operation\Replacement;
 
 use Rikta\PhpQuery\Operation\QueryOperationInterface;
 use Rikta\PhpQuery\Operation\QueryOperationTrait;
-use Rikta\PhpQuery\Utils\PathGetter;
+use Rikta\PhpQuery\Utils\ValuePath;
 
 class MultiMap implements QueryOperationInterface
 {
     use QueryOperationTrait;
 
-    /** @var array<string, PathGetter> */
+    /** @var array<string, ValuePath> */
     private array $mapping;
 
     /**
      * MultiMap constructor.
      *
-     * @param array<string, PathGetter> $mapping
+     * @param array<string, ValuePath> $mapping
      */
     public function __construct(array $mapping)
     {
